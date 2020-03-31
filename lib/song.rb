@@ -45,6 +45,10 @@ class Song
       array.sort_by{|song| song.name}
   end
 
+  def self.new_from_filename(file_name)
+    
+  end
+  
   def self.destroy_all
     @@all.clear
   end
