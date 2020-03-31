@@ -23,6 +23,10 @@ class Song
     song
   end
   
+  def self.create_by_name(song_name)
+    
+  end
+  
   def self.find_by_name(song_name)
     #finds song name and returns matching instance of the song with that name 
     self.all.detect {|song| song.name == song_name}
