@@ -19,12 +19,14 @@ class Song
     #return song instance with song name set as name property
     song = self.new
     song.name = song_name
-    song.save
     song
   end
   
   def self.create_by_name(song_name)
-    
+    song = self.new
+    song.name = song_name
+    song.save
+    song
   end
   
   def self.find_by_name(song_name)
