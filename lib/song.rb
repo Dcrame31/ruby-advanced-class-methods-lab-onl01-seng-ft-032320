@@ -41,8 +41,8 @@ class Song
   end
   
   def self.alphabetical
-    array = self.all.map{|song| song.name}
-      array.sort
+    array = self.all.each{|song| song.name}
+      array.sort_by{|song| song.name}
   end
 
   def self.destroy_all
