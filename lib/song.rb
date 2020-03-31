@@ -29,13 +29,12 @@ class Song
   end
   
   def self.find_or_create_by_name(song_name)
-    self.all.each {|song|
-      return song if song.name == song_name}
-      song = self.new
-      song.name = song_name
-      song.save
-      song
-  enddef self.find_or_create_by_name(song_name)
+    self.all.include?(song_name)
+    if true
+      self.find_by_name(song_name)
+    else
+      self.new_by_name(song_name)
+    end
   end
 
   def self.destroy_all
