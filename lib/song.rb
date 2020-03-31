@@ -27,6 +27,9 @@ class Song
     #finds song name and returns matching instance of the song with that name 
     self.all.detect {|song| song.name == song_name}
   end
+  
+  def self.find_or_create_by_name(song_name)
+  end
 
   def self.destroy_all
     @@all.clear
