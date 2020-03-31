@@ -42,7 +42,7 @@ class Song
   
   def self.alphabetical
     array = self.all.map{|song| song.name}
-      array.sort{|a,b| a <=>b}
+      array.sort
   end
 
   def self.destroy_all
