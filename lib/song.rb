@@ -61,6 +61,7 @@ class Song
     song.name = track_file[1]
     song.artist_name = track_file[0]
     song.save
+    song
   end
   
   def self.destroy_all
